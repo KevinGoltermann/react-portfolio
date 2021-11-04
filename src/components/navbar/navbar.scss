@@ -3,8 +3,22 @@
 .navbar {
 	height: 70px;
 	width: 100%;
-	background: $mainColor;
+	background-color: $mainColor;
 	position: fixed;
 	top: 0;
 	z-index: 2;
+}
+
+.wrapper {
+	padding: 10px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.wrapper .left .logo {
+	font-size: 40px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #CBCBCB;
 }
