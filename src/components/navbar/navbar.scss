@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .navbar {
-	height: 70px;
+	height: 80px;
 	width: 100%;
 	background-color: $mainColor;
 	position: fixed;
@@ -16,9 +16,34 @@
 	justify-content: space-between;
 }
 
+.wrapper .left {
+	display: flex;
+	align-items: center;
+	color: #CBCBCB;
+}
+
 .wrapper .left .logo {
 	font-size: 40px;
 	font-weight: 700;
 	text-decoration: none;
 	color: #CBCBCB;
+	margin-right: 40px;
+}
+
+
+
+.wrapper .left .itemcontainer {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+
+.wrapper .left .itemcontainer .icon {
+	font-size: 22px;
+	margin-right: 8px;
+}
+
+.wrapper .left .itemcontainer span {
+	font-size: 10px;
+	font-weight: 500;
 }
