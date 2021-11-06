@@ -1,3 +1,81 @@
+@import "../../global.scss";
+
 .intro {
-	background: #CBCBCB;
+	background: $mainColor;
+	display: flex;
+
+	.left{
+		flex: 0.5;
+
+
+		.imgContainer {
+			width: 400px;
+			height: 400px;
+			background-color: $secondaryColor;
+			border-radius: 50% 20% / 50% 20%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			margin-top: 60px;
+
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.right{
+		flex: 0.5;
+		overflow: hidden;
+		position: relative;
+		
+		.wrapper {
+			padding-left: 0px;
+			width: 100%;
+			height: 100%;
+			color: $secondaryColor;
+	  		display: flex;
+	  		flex-direction: column;
+	  		justify-content: center;
+	  		align-items: center;
+
+		  	h1 {
+	  			font-size: 50px;
+	  			margin: 10px 0;
+	  		}
+	  		h2 {
+	  			font-size: 35px;
+	  		}
+	  		h3 {
+	  			font-size: 30px;
+	  		}
+		}
+
+		a {
+			color: $secondaryColor;
+			text-decoration: none;
+			position: absolute;
+			bottom: 25px;
+			transform: scale(1.5);
+			margin-left: 50%;
+
+			transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+			animation: arrowBlink 3s infinite;
+
+			&:hover {
+    			transform: scale(3.0);
+			}
+		}
+
+		@keyframes arrowBlink {
+			100% {
+				opacity: 10%;
+			}
+		}
+	}
 }
+
