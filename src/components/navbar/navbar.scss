@@ -92,6 +92,16 @@
 }
 
 
+.navbar .divider {
+  	display: block;
+  	position: absolute;
+  	bottom: 0;
+  	height: 1px;
+  	width: 100%;
+  	background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(75,75,173,1) 50%, rgba(0,0,0,1) 100%);
+  }
+
 
 
 

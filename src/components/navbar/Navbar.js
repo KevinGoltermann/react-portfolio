@@ -25,6 +25,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 					</div>
 				</div>
 			</div>
+			<div className="divider"></div>
 		</div>
 	)
 }

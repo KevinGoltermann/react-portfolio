@@ -1,3 +1,106 @@
+@import "../../global.scss";
+
 .intro {
-	background: #CBCBCB;
+	background: $mainColor;
+	display: flex;
+
+	.left{
+		flex: 0.5;
+
+
+		.imgContainer {
+			width: 400px;
+			height: 400px;
+			background: rgb(0,0,0);
+			background: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(75,75,173,1) 50%, rgba(0,0,0,1) 80%);
+			border-radius: 80% 40% / 80% 40%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			margin-top: 60px;
+
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.right{
+		flex: 0.5;
+		overflow: hidden;
+		position: relative;
+		
+		.wrapper {
+			padding-left: 0px;
+			width: 100%;
+			height: 100%;
+			color: $secondaryColor;
+	  		display: flex;
+	  		flex-direction: column;
+	  		justify-content: center;
+	  		align-items: center;
+
+		  	h1 {
+	  			font-size: 50px;
+	  			margin: 10px 0;
+	  		}
+	  		h2 {
+	  			font-size: 35px;
+	  		}
+	  		h3 {
+	  			font-size: 30px;
+
+	  			span {
+	  				font-size: inherit;
+	  				color: red;
+	  			}
+	  		}
+		}
+
+		a {
+			color: $secondaryColor;
+			text-decoration: none;
+			position: absolute;
+			bottom: 25px;
+			transform: scale(1.5);
+			margin-left: 50%;
+
+			transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+			
+
+			&:hover {
+    			transform: scale(3.0);
+    			animation: arrowBlink 3s 1 forwards;
+			}
+		}
+
+		@keyframes arrowBlink {
+			100% {
+				opacity: 25%;
+			}
+		}
+	}
 }
+
+
+.ityped-cursor {
+	animation: blink 1s infinite
+}
+
+@keyframes blink {
+    50% {
+    	opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
