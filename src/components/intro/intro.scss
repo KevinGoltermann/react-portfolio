@@ -11,8 +11,9 @@
 		.imgContainer {
 			width: 400px;
 			height: 400px;
-			background-color: $secondaryColor;
-			border-radius: 50% 20% / 50% 20%;
+			background: rgb(0,0,0);
+			background: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(75,75,173,1) 50%, rgba(0,0,0,1) 80%);
+			border-radius: 80% 40% / 80% 40%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -51,6 +52,11 @@
 	  		}
 	  		h3 {
 	  			font-size: 30px;
+
+	  			span {
+	  				font-size: inherit;
+	  				color: red;
+	  			}
 	  		}
 		}
 
@@ -64,18 +70,37 @@
 
 			transition: width 2s, height 2s, background-color 2s, transform 2s;
 
-			animation: arrowBlink 3s infinite;
+			
 
 			&:hover {
     			transform: scale(3.0);
+    			animation: arrowBlink 3s 1 forwards;
 			}
 		}
 
 		@keyframes arrowBlink {
 			100% {
-				opacity: 10%;
+				opacity: 25%;
 			}
 		}
 	}
 }
+
+
+.ityped-cursor {
+	animation: blink 1s infinite
+}
+
+@keyframes blink {
+    50% {
+    	opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
 
